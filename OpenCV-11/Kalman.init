@@ -1,0 +1,24 @@
+n=4 m=2 p=0
+A+C+Q+G-u-L-R+P+x+
+%transition matrix A:
+1 0 -1 0
+0 1 0 -1
+0 0 1 0
+0 0 0 1
+%measurement matrix C:
+1 0 0 0 0 1 0 0
+%system-error covariance matrix Q: 
+54.0 38.0 48.0 50.0
+38.0 34.0 42.0 44.0
+48.0 42.0 44.0 45.0
+50.0 44.0 45.0 48.0
+%measurement-error covariance matrix R:
+1.0 1.0
+1.0 1.0
+%initial estimation-error covariance matrix P0:
+0 0 0 0
+0 0 0 0
+0 0 0 0
+0 0 0 0
+%initial estimate x0:
+200 200 1 1

@@ -58,8 +58,7 @@ int brightness = 1;
 Point startPoint, endPoint;
 Mat image = imread("OpenCV-02/Img02a.jpg");
 
-void onMouse(int event, int x, int y, int flags, void* userdata)
-{
+void onMouse(int event, int x, int y, int flags, void* userdata) {
 	if (event == MouseEventTypes::EVENT_LBUTTONDOWN) {
 		printf("x: %d, y: %d\n", x, y);
 
@@ -78,8 +77,7 @@ void onMouse(int event, int x, int y, int flags, void* userdata)
 	}
 }
 
-void onContrastChange(int pos, void* userdata)
-{
+void onContrastChange(int pos, void* userdata) {
 	if (pos == 0) {
 		contrast = 1;
 		return;
@@ -92,8 +90,7 @@ void onContrastChange(int pos, void* userdata)
 	imshow("Image", newImage);
 }
 
-void onBrightnessChange(int pos, void* userdata)
-{
+void onBrightnessChange(int pos, void* userdata) {
 	brightness = pos;
 	Mat newImage;
 	image.convertTo(newImage, -1, contrast, brightness);

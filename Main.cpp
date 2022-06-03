@@ -30,11 +30,17 @@ int main() {
 	//praktikum6_aufgabe2();
 
 	// Praktikum 7
-	
+	//praktikum7_aufgabe1();	// nicht vollständig! (jemand nachfragen)
+	//praktikum7_aufgabe2();	// nicht vollständig! (jemand nachfragen)
+
 	// Praktikum 8
-	
+	//praktikum8_aufgabe1();
+	//praktikum8_aufgabe2();
+
 	// Praktikum 9
-	
+	//praktikum9_aufgabe1();
+	praktikum9_aufgabe2();
+
 	// Praktikum 10
 	
 	// Praktikum 11

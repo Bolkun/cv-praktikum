@@ -31,7 +31,8 @@ int praktikum8_aufgabe2();
 int praktikum9_aufgabe1();
 int praktikum9_aufgabe2();
 // Praktikum 10
-
+int praktikum10_aufgabe1();
+int praktikum10_aufgabe2();
 // Praktikum 11
 
 // Praktikum 12

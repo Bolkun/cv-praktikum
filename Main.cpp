@@ -39,10 +39,11 @@ int main() {
 
 	// Praktikum 9
 	//praktikum9_aufgabe1();
-	praktikum9_aufgabe2();
+	//praktikum9_aufgabe2();
 
 	// Praktikum 10
-	
+	praktikum10_aufgabe1();
+	//praktikum10_aufgabe2();
 	// Praktikum 11
 	
 	// Praktikum 12

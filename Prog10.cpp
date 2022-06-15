@@ -21,14 +21,23 @@ int praktikum10_aufgabe1() {
     image1 = imread("OpenCV-10/Img10a01.png", IMREAD_GRAYSCALE);
     image2 = imread("OpenCV-10/Img10a02.png", IMREAD_GRAYSCALE);
 
-    int arX[8] = { 192, 235, 30, 157, 270, 267, 80, 214 };  // manuel aus photoshop ausgelesen
-    int arY[8] = { 162, 99, 50, 45, 186, 231, 256, 258 };
+    // Punkte müssen übereinstimmen
+    int arX1[8] = { 190, 80, 216, 268, 235, 158, 199, 351};  // manuel aus photoshop ausgelesen
+    int arY1[8] = { 159, 255, 254, 230, 95, 43, 72, 194};
+
+    int arX2[8] = { 162, 57, 194, 251, 205, 148, 184, 336};  // manuel aus photoshop ausgelesen
+    int arY2[8] = { 159, 255, 256, 230, 95, 43, 72, 194};
 
     for (int i = 0; i < 8; i++) {   // 8 Punkten in einen Bild und 8 Punkten in anderen Bild auswählen
-        int x = arX[i];
-        int y = arY[i];
-        selPoints1.push_back(Point2f(x, y)); // Punkte in selPoints laden
-        selPoints2.push_back(Point2f(x, y));
+        int x1 = arX1[i]; 
+        int y1 = arY1[i];
+        int x2 = arX2[i];
+        int y2 = arY2[i];
+        selPoints1.push_back(Point2f(x1, y1)); // Punkte in selPoints laden
+        //selPoints2.push_back(Point2f(x2, y2));
+        selPoints2.push_back(Point2f(x1 + 1 * i, y1 + 0 * i));    // horizontale linien
+        //selPoints2.push_back(Point2f(x2 + 2 * i, y2 + 1 * i));    // diagonale linien
+        //selPoints2.push_back(Point2f(x2 + y2, y2));                  // rechts nach links linien
     }
 
     Mat fundamental = findFundamentalMat(selPoints1, selPoints2, FM_RANSAC, 3.0, 0.99);

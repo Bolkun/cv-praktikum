@@ -1,11 +1,11 @@
-#include "Praktikum.h"
+﻿#include "Praktikum.h"
 #include <opencv2/opencv.hpp>
 #include <math.h>
 
 using namespace cv;
 using namespace std;
 
-// Aufgabe 1 & 2 (Musterl�sung von Prof.)
+// Aufgabe 1 & 2 (Musterlösung von Prof.)
 int praktikum12_aufgabe1UND2() {
 	Mat image, image0, image1, image2,
 		imagergb, imagebgr0, imagebgr1, imagebgr2,
@@ -20,7 +20,7 @@ int praktikum12_aufgabe1UND2() {
 	imagebgr1 = planes[1];
 	imagebgr2 = planes[2];
 	imshow("Imagebgr0 (Blau Kanal)", imagebgr0);
-	imshow("Imagebgr1 (Gr�n Kanal)", imagebgr1);
+	imshow("Imagebgr1 (Grün Kanal)", imagebgr1);
 	imshow("Imagebgr2 (Rot Kanal)", imagebgr2);
 	waitKey();
 	cvtColor(image, imagehls, COLOR_BGR2HLS);
@@ -37,8 +37,8 @@ int praktikum12_aufgabe1UND2() {
 	threshold(image0, image0, 130, 0, THRESH_TOZERO_INV);
 	normalize(image0, image0, 0, 255, NORM_MINMAX);
 	threshold(image0, image0, 150, 250, THRESH_BINARY);
-	erode(image0, image3, Mat(), Point(-1, -1), 2);
-	dilate(image3, image3, Mat(), Point(-1, -1), 2);
+	erode(image0, image3, Mat(), Point(-1, -1), 2);	// разрушить
+	dilate(image3, image3, Mat(), Point(-1, -1), 2);	// расширить
 	threshold(imagehls0, image1, 35, 0, THRESH_TOZERO);
 	threshold(image1, image1, 90, 0, THRESH_TOZERO_INV);
 	normalize(image1, image1, 0, 255, NORM_MINMAX);

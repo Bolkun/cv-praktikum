@@ -48,15 +48,18 @@ int main() {
 	// Praktikum 11
 	//praktikum11_aufgabe1();
 	//praktikum11_aufgabe2();	// not working!!!
-	//praktikum11_aufgabe2a();
+	//praktikum11_aufgabe2a();	// alternativ lösung
 
 	// Praktikum 12
-	praktikum12_aufgabe1UND2();
+	//praktikum12_aufgabe1UND2();
 
 	// Praktikum 13
-	
+	praktikum13_aufgabe1();
+	//praktikum13_aufgabe2();
+
 	// Praktikum 14
 	
+
 	// Praktikum 15
 
 

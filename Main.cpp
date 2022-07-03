@@ -42,12 +42,17 @@ int main() {
 	//praktikum9_aufgabe2();
 
 	// Praktikum 10
-	praktikum10_aufgabe1();
+	//praktikum10_aufgabe1();
 	//praktikum10_aufgabe2();
+	
 	// Praktikum 11
-	
+	//praktikum11_aufgabe1();
+	//praktikum11_aufgabe2();	// not working!!!
+	//praktikum11_aufgabe2a();
+
 	// Praktikum 12
-	
+	praktikum12_aufgabe1UND2();
+
 	// Praktikum 13
 	
 	// Praktikum 14

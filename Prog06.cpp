@@ -33,7 +33,7 @@ int praktikum6_aufgabe1() {
             modifiedFrame.copyTo(lastModifiedFrame);
         }
 
-        absdiff(modifiedFrame, lastModifiedFrame, differenceFrame);
+        absdiff(modifiedFrame, lastModifiedFrame, differenceFrame); // inputArray1, inputaArray2, outputArray
 
         imshow("Video", frame);
         imshow("blured Video", bluredFrame);
@@ -64,7 +64,7 @@ void resizeImage(Mat& image) {
                 return;
             }
 
-            resize(image, resized, Size(image.cols - i, image.rows - j));
+            resize(image, resized, Size(image.cols - i, image.rows - j));   // InputArray, OutputArray, dsize
             imshow("Resized", resized);
             waitKey(27);
         }
@@ -76,8 +76,8 @@ void rotateImage(Mat& image) {
     Point center = Point(image.cols / 2, image.rows / 2);
     double scale = 0.6;
     for (double angle = 0; angle <= 360; angle++) {
-        Mat rotationMatrix = getRotationMatrix2D(center, angle, scale);
-        warpAffine(image, rotated, rotationMatrix, image.size());
+        Mat rotationMatrix = getRotationMatrix2D(center, angle, scale); // center, angle, scale
+        warpAffine(image, rotated, rotationMatrix, image.size());       // InputArray, OutputArray, InputArray (rotation Mat), dsize
 
         imshow("Rotated", rotated);
         waitKey(27);
@@ -118,7 +118,7 @@ void warpImage(Mat& image)
     Mat m = getPerspectiveTransform(inputPoints, outputPoints);
 
     Mat warped;
-    warpPerspective(image, warped, m, Size(maxWidth, maxHeight));
+    warpPerspective(image, warped, m, Size(maxWidth, maxHeight));   // InputArray, OutputArray, InputArray (rotation Mat), dsize
 
     imshow("Warped", warped);
 

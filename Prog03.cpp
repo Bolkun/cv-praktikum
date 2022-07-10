@@ -73,11 +73,11 @@ Mat shiftChannels(Mat image) {
 int praktikum3_aufgabe1() {
 	Mat image = imread("OpenCV-03/Img03a.jpg");
 
+	// Variante 1
 	imshow("Image", image);
-
 	imshow("Changed channel mapping", shiftChannels(image));
-
 	imshow("Average gray", averageGray(image));
+
 	// Variante 2
 	Mat modified_image;
 	modified_image = image.clone();

@@ -27,7 +27,7 @@ int praktikum4_aufgabe1() {
 
 	Ptr<Stitcher> stitcher = Stitcher::create(Stitcher::PANORAMA);
 
-	Stitcher::Status status = stitcher->stitch(images, panorama);
+	Stitcher::Status status = stitcher->stitch(images, panorama);	// Input Array, Output Array
 
 	if (status != Stitcher::OK)
 	{
@@ -60,7 +60,7 @@ int praktikum4_aufgabe2() {
 
 	// Markante Punkte finden
 	feature2D->detectAndCompute(image1, Mat(), keyImage1, descImage1, false);	// Detects keypoints and computes the descriptors
-	feature2D->detectAndCompute(image2, Mat(), keyImage2, descImage2, false);
+	feature2D->detectAndCompute(image2, Mat(), keyImage2, descImage2, false);	// (Input Mat, mask, vec KeyPoints, Output Mat, useProvidedKeyPoints)
 
 	drawKeypoints(image1, keyImage1, result1);	// This function draws matches of keypoints from two images in the output image. Match is a line connecting two keypoints(circles)
 	drawKeypoints(image2, keyImage2, result2);

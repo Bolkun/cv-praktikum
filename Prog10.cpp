@@ -246,15 +246,16 @@ int praktikum10_aufgabe2() {
     image2 = imread("OpenCV-10/Img10d02.jpg", IMREAD_GRAYSCALE);  // mittlere teil vorne
     image3 = imread("OpenCV-10/Img10d03.jpg", IMREAD_GRAYSCALE);  // rechte teil vorne
 
-    Laplacian(image1, image1, image1.depth(), 5, 1, 100);
+    Laplacian(image1, image1, image1.depth(), 5, 1, 100);   // InputArray, OutputArray, depth, ksize, scale
     //imshow("Image1-Laplacian", image1);
     pyrDown(image1, image1);    // wie Glättung + Skalierung runter gesetzt
     //imshow("Image1-pyrDown", image1);
-    blur(image1, image1, Size(21, 21), Point(0, 0));
+    blur(image1, image1, Size(21, 21), Point(0, 0));    // InputArray, OutputArray, ksize, anchorPoint
     //imshow("Image1-blur1", image1);
     blur(image1, image1, Size(21, 21), Point(0, 0));
     //imshow("Image1-blur2", image1);
-    threshold(image1, image1, 130, 100, THRESH_BINARY); // Schranken Filter (Alles was über 130 wird auf 100 gesetzt, binär - tiefenwerte) - Kontrasteste Bereich am hellsten
+    // Schranken Filter (Alles was über 130 wird auf 100 gesetzt, binär - tiefenwerte) - Kontrasteste Bereich am hellsten
+    threshold(image1, image1, 130, 100, THRESH_BINARY); // InputArray, OutputArray, thres, maxthres, type
     imshow("Image1-threshold", image1);
 
     Laplacian(image2, image2, image2.depth(), 5, 1, 100);

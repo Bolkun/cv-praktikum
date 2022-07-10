@@ -25,11 +25,11 @@ int praktikum13_aufgabe1() {
 		string filename3 = ".jpg";
 		Mat leaf = imread(filename1 + filename2 + filename3);
 
-		int result_cols = leaf.cols - templ.cols + 1;
-		int result_rows = leaf.rows - templ.rows + 1;
+		/*int result_cols = leaf.cols - templ.cols + 1;
+		int result_rows = leaf.rows - templ.rows + 1;*/
 		Mat result;
-		result.create(result_rows, result_cols, CV_32FC1);
-		matchTemplate(leaf, templ, result, TM_SQDIFF);
+		//result.create(result_rows, result_cols, CV_32FC1);*/
+		matchTemplate(leaf, templ, result, TM_SQDIFF);	// InputArray image, InputArray template, OutputArray result, method
 		normalize(result, result, 0, 1, NORM_MINMAX);
 
 		double minVal; double maxVal; Point minLoc; Point maxLoc;

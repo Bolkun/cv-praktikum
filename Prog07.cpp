@@ -12,6 +12,54 @@ using namespace cv;
 using namespace std;
 
 // Aufgabe 1
+int prak07_A1() {
+    Mat image0, image2, image3, image4, image5, image6, image7, image8, image9;
+    Mat image1 = imread("OpenCV-07/Img07a.jpg");
+    vector<cv::Mat> planes;
+    split(image1, planes);
+    printf("Size: %d", planes.size());  // 3 [0] - b, [1] - g, [2] - r
+    //green channel bcs. most information in it
+    image0 = planes[1];
+    imshow("Original", image1);
+    imshow("planes[0]", image0);
+    imshow("planes[1]", image0);
+    imshow("planes[2]", image0);
+    waitKey();
+    Mat kernel1 = (Mat_<double>(3, 3) << -1, -1, -1, 0, 0, 0, 1, 1, 1);
+    filter2D(image1, image2, image1.depth(), kernel1);  // inputArray, outputArray, ddepth, InputArray
+    imshow("horizontal", image2);
+    waitKey();
+    Mat kernel2 = (Mat_<double>(3, 3) << -1, 0, 1, -1, 0, 1, -1, 0, 1);
+    filter2D(image1, image3, image1.depth(), kernel2);
+    imshow("vertikal", image3);
+    waitKey();
+    threshold(image1, image4, 200, 255, THRESH_BINARY); // inputArray, outputArray, thres, maxthres, type
+    imshow("thresh", image4);
+    waitKey();
+    // The Sobel Operator is a discrete differentiation operator. It computes an approximation of the gradient of an image intensity function
+    // The Sobel Operator combines Gaussian smoothing and differentiation.
+    Sobel(image1, image5, image1.depth(), 1, 0, FILTER_SCHARR); // inputArray, outputArray, depth, x, y, size
+    Sobel(image1, image6, image1.depth(), 2, 0, 3);
+    Sobel(image1, image7, image1.depth(), 3, 0, 7);
+    imshow("sobel", image5);
+    waitKey();
+    imshow("sobel", image6);
+    waitKey();
+    imshow("sobel", image7);
+    waitKey();
+    Laplacian(image1, image9, image1.depth(), 3, 1, 1); // inputArray, outputArray, depth, size, scale, delta
+    imshow("Laplacian", image9);
+    waitKey();
+    cornerHarris(image0, image8, 1, 1, 1); // inputArray, outputArray, BlockSize, ksize (sobel operator), k
+    image8 = 255 - image8;
+    normalize(image8, image8, 0, 1, NORM_MINMAX); // inputArray, outputArray, alpha, betta, norm_type
+    imshow("cornerHarris", image8);
+    waitKey();
+
+    return 1;
+}
+
+// Aufgabe 1
 Mat sobel(Mat src, Mat kernel) {
     Mat dst;
     filter2D(src, dst, CV_16S, kernel);

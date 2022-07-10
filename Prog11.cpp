@@ -30,7 +30,7 @@ int praktikum11_aufgabe1() {
 		if (frame.empty()) break;
 		split(frame, planes);
 		frame1 = planes[1];
-		calcOpticalFlowFarneback(frame0, frame1, flow, 0.5, 2, 5, 5, 5, 1.1, OPTFLOW_FARNEBACK_GAUSSIAN);
+		calcOpticalFlowFarneback(frame0, frame1, flow, 0.5, 2, 5, 5, 5, 1.1, OPTFLOW_FARNEBACK_GAUSSIAN);   // InputArray prev, InputArray next, computedFlowImage, imageScale, pyramidLevels, windowSize, flags
 		split(flow, planes1);
 		flowx = planes1[0];
 		flowy = planes1[1];

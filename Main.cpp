@@ -30,8 +30,9 @@ int main() {
 	//praktikum6_aufgabe2();
 
 	// Praktikum 7
-	//praktikum7_aufgabe1();	// nicht vollständig! (jemand nachfragen)
-	//praktikum7_aufgabe2();	// nicht vollständig! (jemand nachfragen)
+	//prak07_A1();
+	//praktikum7_aufgabe1();
+	//praktikum7_aufgabe2();		// nicht vollständig! (jemand nachfragen)
 
 	// Praktikum 8
 	//praktikum8_aufgabe1();
@@ -42,7 +43,8 @@ int main() {
 	//praktikum9_aufgabe2();
 
 	// Praktikum 10
-	//praktikum10_aufgabe1();
+	//praktikum10_aufgabe1();	// algo good but not drawing!
+	//praktikum10_aufgabe1b();	// alternative
 	//praktikum10_aufgabe2();
 	
 	// Praktikum 11
@@ -54,8 +56,8 @@ int main() {
 	//praktikum12_aufgabe1UND2();
 
 	// Praktikum 13
-	praktikum13_aufgabe1();
-	//praktikum13_aufgabe2();
+	//praktikum13_aufgabe1();
+	praktikum13_aufgabe2();
 
 	// Praktikum 14
 	

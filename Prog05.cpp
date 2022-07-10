@@ -140,7 +140,7 @@ int praktikum5_aufgabe2() {
     merge(planes, complexI);
 
     // Discrete Fourier Transformation
-    dft(complexI, complexI);
+    dft(complexI, complexI);    // InputArray, OutputArray
 
     // compute log(1 + sqrt(Re(DFT(img))**2 + Im(DFT(img))**2))
     split(complexI, planes);
